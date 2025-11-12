@@ -81,6 +81,14 @@ DEMO_HTML = """
         <textarea name="message" rows="4" cols="50"></textarea><br>
         <button type="submit">Predict</button>
     </form>
+
+    {% if prediction %}
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+    {% endif %}
+
+    {% if error %}
+    <p style="color:red;"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
 </body>
 </html>
 """
