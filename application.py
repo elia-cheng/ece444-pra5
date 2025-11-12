@@ -66,9 +66,22 @@ def _eager_load_background():
 threading.Thread(target=_eager_load_background, daemon=True).start()
 
 DEMO_HTML = """
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  *** write HTML for a simple demo page with a form to input text and display prediction results ***
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classifier Demo</title>
+</head>
+<body>
+    <h1>Text Classifier Demo</h1>
+    
+    <form action="/predict" method="post">
+        <label>Enter text to classify:</label><br>
+        <textarea rows="4" cols="50"></textarea><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
 </html>
 """
 
