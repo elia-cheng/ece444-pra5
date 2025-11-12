@@ -76,9 +76,9 @@ DEMO_HTML = """
 <body>
     <h1>Text Classifier Demo</h1>
     
-    <form action="/predict" method="post">
+    <form action="/predict-form" method="post">
         <label>Enter text to classify:</label><br>
-        <textarea rows="4" cols="50"></textarea><br>
+        <textarea name="message" rows="4" cols="50"></textarea><br>
         <button type="submit">Predict</button>
     </form>
 </body>
